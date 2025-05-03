@@ -1,0 +1,37 @@
+In this file i will document my journey step by step so i can write the project report later
+first steps i read carefully points A and B
+created folder that contains everything and created task 1 task 2 task 3 folders 
+created a git hub repasatory and made it private
+
+Task 1:
+i got asked in task one that we must try some commands
+opened the terminal/ command line.... i am on windows 10 so its called CMD
+first i changed the color of the text to make it unique for my project
+i did color 9 command
+
+lets start and put ipconfig command and also tried ipconfig/all 
+told my self i want to learn more about the commands
+and as to my knowledge if i want to know the manual of any command in the cmd 
+i use the suffix /? after any command
+so i used it and learnt what it does precisly after reading the official documentation from microsoft
+https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands
+now i want to explain it
+A)
+ipconfig : This command displays Internet protocol details for both IPv4 and IPv6 with their addresses, subnet masks, default gateway and DNS suffix. All of this information linked to network adapters.
+
+
+now i want to learn what the command "ping" does.
+ping (Packet Internet Grouper): writing this command itself displays its manual ,how to use it and what it does if a parameter has been used. Its main use is testing internet/host reachability, internet connectivity, network interface card and DNS issues.
+
+
+tracert (traceroute): It displays the path that packets from my computer take to reach the destination. It is a step-by-step overview of each network hop along the route, using this command without parameters displays the manual.
+
+
+telnet: It is a terminal emulation program that is used to access remote servers and control them. writing the command without any parameters takes you to the telnet command line itself where you can write commands to connect to a specified server.
+
+nslookup: Displays information about DNS (Domain Name System), including default DNS  server, name and the address (IP).
+
+after finishing now task 1 A) lets go to start working on task B) reading the document carefully and doing what i have been asked to do
+
+B)
+
