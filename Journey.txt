@@ -35,3 +35,105 @@ after finishing now task 1 A) lets go to start working on task B) reading the do
 
 B)
 
+i wrote the command ipconfig/all
+the IP address : IPv4 Address. . . . . . . . . . . : 192.168.1.18(Preferred)
+the subnet Mask :  Subnet Mask . . . . . . . . . . . : 255.255.255.0
+the default gateway : Default Gateway . . . . . . . . . : 192.168.1.1
+The DNS server address : DNS Servers . . . . . . . . . . . : 192.168.1.1
+
+I used ping 192.168.1.22 which is to send packets to my phone annd see the connection state
+the result was :
+Pinging 192.168.1.22 with 32 bytes of data:
+Reply from 192.168.1.22: bytes=32 time=70ms TTL=64
+Reply from 192.168.1.22: bytes=32 time=5ms TTL=64
+Reply from 192.168.1.22: bytes=32 time=7ms TTL=64
+Reply from 192.168.1.22: bytes=32 time=6ms TTL=64
+
+Ping statistics for 192.168.1.22:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 5ms, Maximum = 70ms, Average = 22ms
+
+then after that tried doing
+C:\Windows\system32>ping gaia.cs.umass.edu
+
+Pinging gaia.cs.umass.edu [128.119.245.12] with 32 bytes of data:
+Reply from 128.119.245.12: bytes=32 time=137ms TTL=41
+Reply from 128.119.245.12: bytes=32 time=136ms TTL=41
+Reply from 128.119.245.12: bytes=32 time=137ms TTL=41
+Reply from 128.119.245.12: bytes=32 time=134ms TTL=41
+
+Ping statistics for 128.119.245.12:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 134ms, Maximum = 137ms, Average = 136ms
+
+based on the information i got back here is what i learnt
+when i tried to something locally the latency was really low such as my smartphone but when tried connecting to a WAN server i got higher latency so i am pretty sure that the packets went to the server it self and didn't face a firewall or anything it just reached the server since the 4 packets are recived which is 0% loss 
+
+
+C:\Windows\system32>tracert gaia.cs.umass.edu
+
+Tracing route to gaia.cs.umass.edu [128.119.245.12]
+over a maximum of 30 hops:
+
+  1     1 ms     2 ms     1 ms  192.168.1.1
+  2     5 ms     4 ms     4 ms  10.74.32.246
+  3    53 ms    54 ms    53 ms  10.74.19.25
+  4     5 ms     4 ms     5 ms  10.74.19.178
+  5    54 ms    53 ms    52 ms  10.74.59.158
+  6    47 ms    47 ms    47 ms  et-4-0-13.edge1.Marseille3.Level3.net [213.242.111.121]
+  7   113 ms    98 ms   109 ms  ae2.3605.edge4.mrs1.neo.colt.net [171.75.8.225]
+  8     *        *        *     Request timed out.
+  9   186 ms   203 ms   223 ms  be2779.ccr41.par01.atlas.cogentco.com [154.54.72.109]
+ 10    65 ms    68 ms    66 ms  be3684.ccr51.lhr01.atlas.cogentco.com [154.54.60.170]
+ 11   137 ms   134 ms   134 ms  be3393.ccr31.bos01.atlas.cogentco.com [154.54.47.141]
+ 12   137 ms   135 ms   135 ms  be8038.rcr71.orh02.atlas.cogentco.com [154.54.169.254]
+ 13   140 ms   140 ms   140 ms  be8628.rcr51.orh01.atlas.cogentco.com [154.54.164.126]
+ 14   131 ms   130 ms   131 ms  38.104.218.14
+ 15   161 ms   136 ms   136 ms  69.16.0.8
+ 16   136 ms   139 ms   136 ms  69.16.1.0
+ 17   140 ms   142 ms   133 ms  core1-rt-et-8-3-0.gw.umass.edu [192.80.83.109]
+ 18   137 ms   138 ms   138 ms  n1-rt-1-1-et-0-0-0.gw.umass.edu [128.119.0.216]
+ 19   136 ms   134 ms   134 ms  n1-fnt-fw-1-1-1-31-vl1092.gw.umass.edu [128.119.77.233]
+ 20     *        *        *     Request timed out.
+ 21   134 ms   134 ms   135 ms  core1-rt-et-7-2-1.gw.umass.edu [128.119.0.217]
+ 22   140 ms   137 ms   137 ms  n5-rt-1-1-xe-2-1-0.gw.umass.edu [128.119.3.33]
+ 23   132 ms   131 ms   130 ms  cics-rt-xe-0-0-0.gw.umass.edu [128.119.3.32]
+ 24     *        *        *     Request timed out.
+ 25   137 ms   138 ms   137 ms  gaia.cs.umass.edu [128.119.245.12]
+
+Trace complete.
+
+
+these are all the routes that been taken
+
+C:\Windows\system32>nslookup gaia.cs.umass.edu
+Server:  UnKnown
+Address:  192.168.1.1
+
+Non-authoritative answer:
+Name:    gaia.cs.umass.edu
+Address:  128.119.245.12
+
+the DNS for gaia.cs.umass.edu is : 128.119.245.12
+
+
+I used telnet and it successfully connected to port 80 since it gave me the black screen where i can write telnet commands and execute them
+
+based on both bgpview and bgptools
+the 
+
+Autonomous System Number (ASN): AS1249
+AS Name: FIVE-COLLEGES-AS
+AS Description: University of Massachusetts - AMHERST
+Number of prefixes: 4
+128.119.0.0/16
+72.19.64.0/18
+192.80.83.0/24
+192.189.138.0/24
+Name: UMASS-NET
+Peers :
+AS1968 (UMASSNET)
+AS168 (University of Massachusetts - AMHERST)
+about Tier 1 ISP : AS1249 is not connected directly to tier 1 ISP but its other upstreams and connections may be connected to Tier 1 ISP

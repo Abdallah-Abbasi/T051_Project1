@@ -1,0 +1,5 @@
+ipconfig : This command displays Internet protocol details for both IPv4 and IPv6 with their addresses, subnet masks, default gateway and DNS suffix. All of this information linked to network adapters.
+ping (Packet Internet Grouper): writing this command itself displays its manual ,how to use it and what it does if a parameter has been used. Its main use is testing internet/host reachability, internet connectivity, network interface card and DNS issues.
+tracert (traceroute): It displays the path that packets from my computer take to reach the destination. It is a step-by-step overview of each network hop along the route, using this command without parameters displays the manual.
+telnet: It is a terminal emulation program that is used to access remote servers and control them. writing the command without any parameters takes you to the telnet command line itself where you can write commands to connect to a specified server.
+nslookup: Displays information about DNS (Domain Name System), including default DNS  server, name and the address (IP).
