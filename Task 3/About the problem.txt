@@ -1,0 +1,6 @@
+Except for the unfixable bug that keeps me from keeping people connected during the UDP match, the gfame is perfectly constructed. I've made multiple unsuccessful attempts to fix it.
+The TCP connection is suddenly cut off.
+Even if the gameplay (guesses) is sent over UDP, the server keeps an open TCP control channel with each player.
+Every time it runs, the server thread check_player_connections() pings that TCP socket and watches for a ping response.
+Since my client never transmits that pong, the server assumes the player has dropped after five seconds, closes the TCP socket, and Windows reports WinError 10054: connection forcefully closed by the remote host.
+When the TCP side is destroyed, the game loop also ends, so even if the UDP code ran flawlessly, the round ends immediately.
