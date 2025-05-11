@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>ملتقط الوسائط – ENCS3320</title>
+
+
+    <link rel="stylesheet" href="Style/Style.css">
+    <link rel="stylesheet" href="Style/mySite.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar" style="direction:rtl">
+        <a class="lang-switch" href="mySite_1232951_en.html">English</a>
+        <h1 class="nav-title">طلب صورة / فيديو</h1>
+        <div class="nav-spacer"></div>
+    </nav>
+
+    <main>
+
+
+        <section class="team-section" style="padding:2rem 0">
+            <div class="team-grid" style="grid-template-columns:minmax(280px,400px);direction:ltr">
+                <article class="team-card" style="padding:2rem 1rem;direction:rtl">
+                    <p style="margin-bottom:1rem">
+                        اكتب <strong>اسم الملف بالضبط</strong>
+                        (مثلاً <em>osi_layers.png</em> أو <em>intro.mp4</em>) ثم اضغط <b>بحث</b>.
+                        إذا لم يُعثر على الملف محلياً، سيعيد الخادم توجيهك إلى
+                        بحث صور أو فيديو في&nbsp;Google.
+                    </p>
+
+                    <form action="/getImage" method="get" class="member-list" style="font-size:1rem">
+                        <label for="imageName">اسم&nbsp;الملف:</label><br>
+                        <input id="imageName" name="imageName" type="text" required
+                            style="direction:ltr;width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px;margin:.5rem 0 1rem">
+                        <button type="submit"
+                            style="padding:.5rem 1.25rem;border:none;border-radius:4px;background:var(--accent);color:#fff;cursor:pointer">
+                            جلب
+                        </button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="page-footer" style="text-align:center">
+        <p>
+            <a href="main_ar.html">العودة إلى الصفحة الرئيسية</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

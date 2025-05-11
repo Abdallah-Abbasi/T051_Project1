@@ -1,0 +1,57 @@
+html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right
+}
+
+
+html[dir="rtl"] .navbar {
+    direction: rtl
+}
+
+html[dir="rtl"] .lang-switch {
+    direction: rtl
+}
+
+html[dir="rtl"] .nav-title {
+    text-align: center
+}
+
+html[dir="rtl"] .team-grid {
+    direction: rtl
+}
+
+html[dir="rtl"] .member-list {
+    direction: rtl;
+    padding-right: 1rem;
+}
+
+
+html[dir="rtl"] ul,
+html[dir="rtl"] ol {
+    direction: rtl;
+    list-style-position: inside;
+    padding-right: 1.2rem;
+    margin-right: 0;
+}
+
+html[dir="rtl"] li {
+    text-align: right
+}
+
+
+html[dir="rtl"] .topic-grid {
+    direction: ltr
+}
+
+
+html[dir="rtl"] .topic-card {
+    direction: rtl
+}
+
+html[dir="rtl"] .topic-card:not(.topic-image) {
+    text-align: right
+}
+
+html[dir="rtl"] .page-footer {
+    text-align: center
+}

@@ -137,3 +137,12 @@ Peers :
 AS1968 (UMASSNET)
 AS168 (University of Massachusetts - AMHERST)
 about Tier 1 ISP : AS1249 is not connected directly to tier 1 ISP but its other upstreams and connections may be connected to Tier 1 ISP
+
+
+C)
+first i didnt download wireshark since i already have it
+i opened it and typed dns to only get the dns results
+i opened edge and went into the site
+flushed my dns with ipconfig/flushdns
+after than refreshed and then started recording the queries from wireshark while going in and out refreshing and doing stuff
+then after i finished i got my results screenshotted them and saved the result on a wireshark file

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Media Finder – ENCS3320</title>
+    <link rel="stylesheet" href="Style/Style.css">
+    <link rel="stylesheet" href="Style/mySite.css">
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <a class="lang-switch" href="mySite_1232951_ar.html">عربي</a>
+        <h1 class="nav-title">Request an Image / Video</h1>
+        <div class="nav-spacer"></div>
+    </nav>
+
+    <main>
+
+
+        <section class="team-section" style="padding:2rem 0">
+            <div class="team-grid" style="grid-template-columns:minmax(280px,400px)">
+                <article class="team-card" style="padding:2rem 1rem">
+                    <p style="margin-bottom:1rem">
+                        Type the <strong>exact file name</strong> you want
+                        (e.g.&nbsp;<em>osi_layers.png</em> or <em>intro.mp4</em>), then hit <b>Fetch</b>.
+                        If the file isn’t found locally, the server will redirect you to
+                        a Google Images / Videos search for it.
+                    </p>
+
+                    <form action="/getImage" method="get" class="member-list" style="font-size:1rem">
+                        <label for="imageName">File&nbsp;name:</label><br>
+                        <input id="imageName" name="imageName" type="text" required
+                            style="width:100%;padding:.5rem;border:1px solid #ccc;border-radius:4px;margin:.5rem 0 1rem">
+                        <button type="submit"
+                            style="padding:.5rem 1.25rem;border:none;border-radius:4px;background:var(--accent);color:#fff;cursor:pointer">
+                            Fetch
+                        </button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="page-footer">
+        <p>
+            <a href="main_en.html">Back to Home</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

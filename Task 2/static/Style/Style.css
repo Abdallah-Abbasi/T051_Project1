@@ -1,0 +1,260 @@
+:root {
+    --accent: #0074ff;
+    --strip-bg: #eef6ff;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
+    --nav-grad: linear-gradient(180deg, #eaf2ff 0%, #ffffff 45%, #ffffff 55%, #d4e8ff 100%);
+    --shadow: rgba(0, 0, 0, .08);
+    --maxwrap: 1200px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--strip-bg);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 0
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: .75rem 1.5rem;
+    background: var(--nav-grad);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .25);
+    font-size: calc(1rem + 4px);
+}
+
+@media(min-width:768px) {
+    .navbar {
+        padding: .75rem 3rem
+    }
+}
+
+.lang-switch {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none
+}
+
+.lang-switch:hover {
+    color: #3398ff
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    font-weight: 700;
+    color: var(--accent)
+}
+
+.team-section,
+.topic-section {
+    background: var(--strip-bg);
+    padding: 1rem 0 1.5rem;
+    margin: 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 3vw + .5rem, 2.4rem);
+    color: var(--accent);
+}
+
+.team-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    max-width: var(--maxwrap);
+    margin: 0 auto;
+}
+
+.team-card {
+    position: relative;
+    text-align: center;
+    background: var(--card-bg);
+    padding: 3.5rem 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+
+}
+
+.avatar-wrapper {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--card-bg);
+    box-shadow: 0 0 0 2px var(--accent);
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.member-list {
+    list-style: none;
+    font-size: 1.25rem;
+    text-align: left;
+    margin-top: .5rem
+}
+
+.topic-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 4fr 3fr;
+    align-items: stretch;
+    max-width: var(--maxwrap);
+    margin: 0 auto;
+}
+
+@media(max-width:700px) {
+    .topic-grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.topic-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow);
+    position: relative;
+}
+
+.topic-card h3 {
+    color: var(--accent);
+    margin: .5rem 0
+}
+
+.topic-card ul,
+.topic-card ol {
+    margin-left: 1rem;
+    margin-bottom: .5rem
+}
+
+.topic-card li {
+    margin: .25rem 0
+}
+
+.topic-card:not(.topic-image) {
+    font-size: calc(1rem + 4px)
+}
+
+.topic-image img {
+    width: 100%;
+    display: block;
+    border-radius: 4px
+}
+
+.topic-image::before,
+.topic-image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: var(--strip-bg);
+    pointer-events: none;
+}
+
+.topic-image::before {
+    top: 0
+}
+
+.topic-image::after {
+    bottom: 0
+}
+
+.page-footer {
+    background: var(--nav-grad);
+    box-shadow: 0 -6px 10px rgba(0, 0, 0, .25);
+    padding: 1rem 1.5rem;
+    font-size: calc(1rem + 4px);
+    text-align: center;
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.page-footer a {
+    color: var(--accent);
+    text-decoration: none
+}
+
+.page-footer a:hover {
+    color: #3398ff
+}
+
+html,
+body,
+main,
+section {
+    margin: 0
+}
+
+@media (max-width:480px) {
+
+    .nav-title {
+        font-size: 1.1rem;
+        line-height: 1.3
+    }
+
+    .section-heading {
+        font-size: 1.25rem
+    }
+
+    .team-section,
+    .topic-section {
+        padding: .75rem 0 1rem
+    }
+
+    .member-list {
+        font-size: .8rem
+    }
+
+    .topic-card:not(.topic-image) {
+        font-size: 1rem
+    }
+
+    .avatar-wrapper {
+        top: -35px;
+        width: 70px;
+        height: 70px
+    }
+
+    .team-card {
+        padding: 3rem .75rem 1.5rem
+    }
+
+    .section-heading {
+        padding: 2rem;
+    }
+}
